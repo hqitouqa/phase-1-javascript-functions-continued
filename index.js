@@ -1,30 +1,24 @@
 // code your solution here
 function saturdayFun(action="roller-skate"){
-     console.log(`This Saturday, I want to ${action}!`)
+     return(`This Saturday, I want to ${action}!`)
 }
    
 
 saturdayFun()
 
-function mondayWork(activity){
-    if(activity==undefined){
-    console.log("This Monday, I will go to the office.")}
+const mondayWork = function (activity="go to the office"){
+   if(activity===undefined){
+        return(`This Monday, I will ${activity}.`)}
     else{
-        console.log(`This Monday, I will ${activity}.`)
-    }
-}
-mondayWork();
-
-//let result = wrapAdjective("||")
-//let emphatic = result("a dedicated programmer")
-function wrapAdjective(initial, adj){
-    if(initial=='*'){
-        console.log(`You are *${adj}*!`)
-    }
-    if(initial=='||'){
-        console.log(`You are ||${adj}||!`)
+     return(`This Monday, I will ${activity}.`)
     }
 }
 
-wrapAdjective('||',"a dedicated programmer")
+mondayWork('work from home');
 
+
+function wrapAdjective(visual="*"){
+    return function (string="special"){
+        return `You are ${visual}${string}${visual}!`
+    }
+}
